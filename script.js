@@ -1,93 +1,52 @@
-const menuButton = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".side-menu");
+// Mobile navigation
+const toggle = document.querySelector(".nav-toggle");
+const links = document.getElementById("nav-links");
 
-if (menuButton && menu) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = menu.classList.toggle("is-open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
+if (toggle && links) {
+  toggle.addEventListener("click", () => {
+    const open = links.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.textContent = open ? "close" : "menu";
   });
-
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("is-open");
-      menuButton.setAttribute("aria-expanded", "false");
-    });
-  });
+  links.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      links.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.textContent = "menu";
+    })
+  );
 }
 
-const canvas = document.getElementById("network-canvas");
+// One-time terminal typing on the home page. The full text is already in the
+// HTML, so without JS (or with reduced motion) visitors simply see it all.
+const term = document.getElementById("terminal");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (canvas) {
-  const context = canvas.getContext("2d");
-  const points = [];
-  const pointCount = 36;
+if (term && !reduceMotion) {
+  const lines = Array.from(term.children);
+  const commands = lines.map((line) => line.querySelector(".cmd"));
+  const fullText = commands.map((c) => (c ? c.textContent : ""));
 
-  const setCanvasSize = () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  };
+  lines.forEach((line) => (line.style.visibility = "hidden"));
+  commands.forEach((c) => c && (c.textContent = ""));
 
-  const createPoints = () => {
-    points.length = 0;
-    for (let index = 0; index < pointCount; index += 1) {
-      points.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        radius: Math.random() * 2.2 + 1.2,
-      });
-    }
-  };
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  const draw = () => {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let pointIndex = 0; pointIndex < points.length; pointIndex += 1) {
-      const point = points[pointIndex];
-      point.x += point.vx;
-      point.y += point.vy;
-
-      if (point.x <= 0 || point.x >= canvas.width) point.vx *= -1;
-      if (point.y <= 0 || point.y >= canvas.height) point.vy *= -1;
-
-      for (let compareIndex = pointIndex + 1; compareIndex < points.length; compareIndex += 1) {
-        const comparePoint = points[compareIndex];
-        const dx = point.x - comparePoint.x;
-        const dy = point.y - comparePoint.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < 220) {
-          const alpha = 1 - distance / 220;
-          context.strokeStyle = `rgba(95, 184, 255, ${alpha * 0.42})`;
-          context.lineWidth = 1;
-          context.beginPath();
-          context.moveTo(point.x, point.y);
-          context.lineTo(comparePoint.x, comparePoint.y);
-          context.stroke();
+  (async () => {
+    await wait(350);
+    for (let i = 0; i < lines.length; i += 1) {
+      const line = lines[i];
+      line.style.visibility = "visible";
+      const cmd = commands[i];
+      if (cmd) {
+        for (const ch of fullText[i]) {
+          cmd.textContent += ch;
+          await wait(45 + Math.random() * 45);
         }
+        await wait(220);
+      } else {
+        await wait(line.classList.contains("gap") ? 60 : 90);
       }
-
-      context.fillStyle = "rgba(95, 184, 255, 0.95)";
-      context.beginPath();
-      context.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
-      context.fill();
-
-      context.fillStyle = "rgba(95, 184, 255, 0.1)";
-      context.beginPath();
-      context.arc(point.x, point.y, point.radius * 4.5, 0, Math.PI * 2);
-      context.fill();
     }
-
-    window.requestAnimationFrame(draw);
-  };
-
-  setCanvasSize();
-  createPoints();
-  draw();
-
-  window.addEventListener("resize", () => {
-    setCanvasSize();
-    createPoints();
-  });
+  })();
 }

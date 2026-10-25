@@ -3,74 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cybersecurity notes and articles by Amanuel Seid.">
-  <title>Blog | Amanuel Seid</title>
+  <title>Writing · Amanuel Seid</title>
+  <meta name="description" content="Security engineering notes by Amanuel Seid: AI agent security, DevSecOps and application security.">
+  <link rel="canonical" href="https://a-m-anuel.github.io/blog.html">
+  <meta name="theme-color" content="#0f151c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230f151c'/%3E%3Ctext x='5' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23ffb547'%3E%3E_%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="terminal-theme">
-  <canvas class="network-canvas" id="network-canvas" aria-hidden="true"></canvas>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="index.html">~/<span>amanuel</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="index.html#experience">experience</a></li>
+        <li><a href="index.html#projects">projects</a></li>
+        <li><a href="index.html#certifications">certs</a></li>
+        <li><a href="blog.html" aria-current="page">writing</a></li>
+        <li><a href="index.html#contact">contact</a></li>
+      </ul>
+      <a class="nav-cv" href="assets/Amanuel_Seid_CV.pdf" target="_blank" rel="noopener">CV.pdf</a>
+    </div>
+  </header>
 
-  <div class="site-frame">
-    <header class="terminal-bar">
-      <div class="terminal-prompt">
-        <span class="prompt-sign">cd</span>
-        <span>/home/amanuelseid/blog</span>
-        <span class="cursor-block" aria-hidden="true"></span>
+  <main id="main" class="article">
+    <div class="wrap">
+      <div class="article-head">
+        <h1>~/writing</h1>
+        <p class="lede">Notes on security engineering: what I build, what I test, and what I learn along the way.</p>
       </div>
-      <div class="terminal-actions">
-        <button class="theme-toggle" type="button" aria-label="Toggle navigation panel">◐</button>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
-          ☰
-        </button>
-      </div>
-    </header>
 
-    <aside class="side-menu" id="site-menu">
-      <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#contact">Contact</a>
-    </aside>
+      <ul class="posts">
+        <li class="post-row">
+          <time datetime="2026-10">Oct 2026</time>
+          <div>
+            <a class="title" href="posts/mcp-config-attack-surface.html">Your MCP config is the new .env file</a>
+            <p>AI agents launch local tools from a JSON file nobody reviews. Here is what goes wrong, and how mcp-guard checks for it.</p>
+          </div>
+        </li>
+        <li class="post-row">
+          <span class="kind">Note</span>
+          <div>
+            <a class="title" href="posts/first-post.html">Why I keep a public portfolio</a>
+            <p>One link that shows the work behind the CV.</p>
+          </div>
+        </li>
+        <li class="post-row">
+          <span class="kind">Medium</span>
+          <div>
+            <a class="title" href="https://medium.com/@cristianaman7" target="_blank" rel="noopener">Security write-ups on Medium</a>
+            <p>Lab walkthroughs, attack techniques and hands-on notes.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
 
-    <main class="page-shell-compact">
-      <section class="content-section page-intro">
-        <div class="section-header">
-          <p class="section-label">Blog</p>
-          <h1 class="page-title">Writing that supports the work behind the CV.</h1>
-        </div>
-        <p class="page-copy">
-          Practical articles, profile-building notes, and security-focused learning collected in one place.
-        </p>
-      </section>
-
-      <section class="content-section">
-        <div class="card-grid">
-          <article class="glass-panel article-card">
-            <h3>Why I built this website as a public CV</h3>
-            <p>A short piece about creating a stronger online profile for hiring teams and networking.</p>
-            <a href="posts/first-post.html">Read post</a>
-          </article>
-          <article class="glass-panel article-card">
-            <h3>Topics that fit this profile</h3>
-            <p>Future ideas for walkthroughs, project notes, and security articles.</p>
-            <a href="posts/ideas.html">View ideas</a>
-          </article>
-          <article class="glass-panel article-card">
-            <h3>Medium archive</h3>
-            <p>External writing covering labs, attacks, and hands-on security learning.</p>
-            <a href="https://medium.com/@cristianaman7" target="_blank" rel="noreferrer">Open Medium</a>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Amanuel Abate Seid</span>
+      <a href="index.html">back to home</a>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

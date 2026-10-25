@@ -3,50 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A short article by Amanuel Seid about building a public CV website.">
-  <title>Why I Built This Site | Amanuel Seid</title>
+  <title>Why I keep a public portfolio · Amanuel Seid</title>
+  <meta name="description" content="A short note by Amanuel Seid on keeping a public portfolio alongside the CV.">
+  <meta name="theme-color" content="#0f151c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230f151c'/%3E%3Ctext x='5' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23ffb547'%3E%3E_%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="subpage-hero">
-      <nav class="nav">
-        <a class="brand" href="../index.html">Amanuel Seid</a>
-        <div class="nav-links">
-          <a href="../index.html">Home</a>
-          <a href="../blog.html">Blog</a>
-        </div>
-      </nav>
-      <p class="eyebrow">Featured note</p>
-      <h1>Why I built this website as a public CV</h1>
-      <p class="lead">A simple site can explain your work faster than a resume alone.</p>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="../index.html">~/<span>amanuel</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about">about</a></li>
+        <li><a href="../index.html#projects">projects</a></li>
+        <li><a href="../blog.html" aria-current="page">writing</a></li>
+        <li><a href="../index.html#contact">contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <main class="post-layout">
-      <p>
-        I wanted a single link I could share on LinkedIn, GitHub, and job applications without
-        making people dig through multiple platforms. A personal site gives context quickly:
-        who I am, what kind of work I care about, and where my strongest work lives.
-      </p>
-      <p>
-        For me, that means bringing together three things in one place: my CV, a few selected
-        cybersecurity projects, and the writing that shows how I learn and communicate technical
-        ideas. The goal is not to say everything. The goal is to make the important things easy
-        to find.
-      </p>
-      <p>
-        I also wanted the design to feel modern and easy to scan on both desktop and mobile.
-        Recruiters move fast, so the structure matters: clear sections, strong calls to action,
-        and direct links to GitHub, LinkedIn, Medium, and the full resume.
-      </p>
-      <a class="button button-secondary" href="../blog.html">Back to blog</a>
-    </main>
-  </div>
+  <main id="main" class="article">
+    <div class="wrap">
+      <header class="article-head">
+        <p class="meta">Note · 2 min read</p>
+        <h1>Why I keep a public portfolio</h1>
+        <p class="lede">A CV lists what I have done. This site shows it.</p>
+      </header>
+
+      <article class="prose">
+        <p>
+          I wanted one link I could share on LinkedIn, GitHub and job applications without making
+          people search across several platforms. A personal site answers the important questions
+          quickly: who I am, what kind of security work I care about, and where the actual work
+          lives.
+        </p>
+        <p>
+          In security, claims are cheap and evidence matters. So the site puts the evidence first:
+          open-source tools you can read and run, the certifications behind my experience, and
+          writing that shows how I think through a problem.
+        </p>
+        <p>
+          It is also a commitment to keep building in public. Every new tool or write-up ends up
+          here, which keeps me honest about shipping things rather than only collecting ideas.
+        </p>
+        <a class="back" href="../blog.html">Back to writing</a>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Amanuel Abate Seid</span>
+      <a href="../index.html">back to home</a>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
 </body>
 </html>

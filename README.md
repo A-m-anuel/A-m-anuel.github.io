@@ -1,36 +1,35 @@
-# Amanuel Seid Personal Website
+# a-m-anuel.github.io
 
-Static personal CV and blog website built for GitHub Pages.
+Personal site of Amanuel Seid, security engineer. Served at https://a-m-anuel.github.io/
 
-## Included
+Plain HTML, CSS and a little JavaScript. No build step, no frameworks, no trackers.
 
-- modern one-page homepage
-- downloadable PDF CV in `assets/`
-- blog landing page
-- two starter post pages
-- mobile-friendly styling
+## Structure
 
-## Publish on GitHub Pages
+| File | Purpose |
+|------|---------|
+| `index.html` | Home: about, experience, projects, certifications, writing, contact |
+| `blog.html` | Writing index |
+| `posts/*.html` | Articles |
+| `styles.css` | All styles (colour tokens at the top) |
+| `script.js` | Mobile menu and the one-time terminal typing in the hero |
+| `404.html` | Not-found page |
+| `assets/Amanuel_Seid_CV.pdf` | Downloadable CV |
+| `.nojekyll` | Tells GitHub Pages to serve files as-is |
 
-1. Create a GitHub repository for this project.
-2. Push the files to the `main` branch.
-3. Open `Settings > Pages` in the repository.
-4. Set the source to `Deploy from a branch`.
-5. Choose `main` and `/root`, then save.
+## Publish
 
-Your site URL will appear after GitHub finishes the deployment.
+GitHub Pages serves this repository automatically because it is named `<user>.github.io`.
+If the site does not appear: **Settings → Pages → Source: Deploy from a branch → `main` / `(root)`**.
 
-## Main files
+## Preview locally
 
-- `index.html`
-- `blog.html`
-- `styles.css`
-- `script.js`
-- `assets/Amanuel_Seid_CV.pdf`
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-## Suggested next updates
+## Add a post
 
-- replace any text that should match your CV more exactly
-- add your email and location if you want them public
-- add screenshots for the featured GitHub projects
-- publish more blog posts over time
+1. Copy `posts/mcp-config-attack-surface.html` to `posts/<new-slug>.html` and edit the title, meta and body.
+2. Add a `<li class="post-row">` entry to `blog.html` (and to the writing section in `index.html` if it should be featured).

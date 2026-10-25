@@ -3,155 +3,380 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Amanuel Seid's cybersecurity portfolio with projects, writing, and a downloadable CV."
-  >
-  <title>Amanuel Seid | Cybersecurity Portfolio</title>
+  <title>Amanuel Seid · Security Engineer</title>
+  <meta name="description" content="Amanuel Seid is a security engineer with 10+ years in application security, DevSecOps and cloud security, and the author of mcp-guard, an open-source scanner for AI agent configurations.">
+  <meta name="author" content="Amanuel Abate Seid">
+  <link rel="canonical" href="https://a-m-anuel.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amanuel Seid · Security Engineer">
+  <meta property="og:description" content="Application security, DevSecOps and AI agent security. Projects, certifications and writing.">
+  <meta property="og:url" content="https://a-m-anuel.github.io/">
+  <meta name="theme-color" content="#0f151c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230f151c'/%3E%3Ctext x='5' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23ffb547'%3E%3E_%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amanuel Abate Seid",
+    "jobTitle": "Security Engineer",
+    "url": "https://a-m-anuel.github.io/",
+    "sameAs": [
+      "https://github.com/A-m-anuel",
+      "https://www.linkedin.com/in/amanuel-abate/",
+      "https://medium.com/@cristianaman7"
+    ],
+    "alumniOf": ["University of Manchester", "Bahir Dar University"]
+  }
+  </script>
 </head>
-<body class="terminal-theme">
-  <canvas class="network-canvas" id="network-canvas" aria-hidden="true"></canvas>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="site-frame">
-    <header class="terminal-bar">
-      <div class="terminal-prompt">
-        <span class="prompt-sign">cd</span>
-        <span>/home/amanuelseid</span>
-        <span class="cursor-block" aria-hidden="true"></span>
-      </div>
-      <div class="terminal-actions">
-        <button class="theme-toggle" type="button" aria-label="Toggle navigation panel">◐</button>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
-          ☰
-        </button>
-      </div>
-    </header>
+  <header class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="#top">~/<span>amanuel</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#certifications">certs</a></li>
+        <li><a href="blog.html">writing</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <a class="nav-cv" href="assets/Amanuel_Seid_CV.pdf" target="_blank" rel="noopener">CV.pdf</a>
+    </div>
+  </header>
 
-    <aside class="side-menu" id="site-menu">
-      <a href="#about">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </aside>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <h1 class="hero-name">Amanuel Seid<span class="caret" aria-hidden="true"></span></h1>
 
-    <main class="landing-shell">
-      <section class="hero-screen">
-        <div class="hero-content">
-          <p class="hero-kicker">Cybersecurity portfolio</p>
-          <h1>Amanuel Seid</h1>
-          <p class="hero-lead">
-            Security projects, technical writing, and a clear public profile built for GitHub,
-            LinkedIn, and recruiter review.
-          </p>
-          <div class="hero-links">
-            <a href="https://github.com/A-m-anuel" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/amanuel-abate/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://medium.com/@cristianaman7" target="_blank" rel="noreferrer">Medium</a>
-          </div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="assets/Amanuel_Seid_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
-            <a class="button button-secondary" href="#projects">Explore Work</a>
+        <div class="terminal" role="group" aria-label="Profile summary">
+          <div class="terminal-head" aria-hidden="true"><i></i><i></i><i></i><b>amanuel@sec: ~</b></div>
+          <div class="terminal-body" id="terminal">
+            <p><span class="ps">$</span> <span class="cmd">whoami</span></p>
+            <p class="out">security engineer · application security, devsecops, cloud</p>
+            <div class="gap"></div>
+            <p><span class="ps">$</span> <span class="cmd">cat focus.txt</span></p>
+            <p class="out">I help engineering teams ship secure software: code review, pentesting,</p>
+            <p class="out">threat modelling, and security gates built into CI/CD. These days I am</p>
+            <p class="out">also working on <span class="hl">AI agent security</span> and MCP supply-chain risk.</p>
+            <div class="gap"></div>
+            <p><span class="ps">$</span> <span class="cmd">uptime</span></p>
+            <p class="out">10+ years in security · Ethiopia → UK → Germany</p>
           </div>
         </div>
-      </section>
 
-      <section class="content-section" id="about">
-        <div class="section-header">
-          <p class="section-label">About</p>
-          <h2>Built to feel direct, technical, and easy to scan.</h2>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn" href="assets/Amanuel_Seid_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn" href="https://github.com/A-m-anuel" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/amanuel-abate/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-        <div class="info-grid">
-          <div class="glass-panel">
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2 class="section-title"><span class="path">~/</span>about</h2>
+        <div class="about-grid">
+          <div>
             <p>
-              This site replaces a plain static resume with something stronger: a single link that
-              shows what I work on, how I present technical ideas, and where to find the projects
-              behind my profile.
+              I have worked in security since 2015: first on national-scale government systems at
+              Ethiopia's Information Network Security Agency, then in health and fintech, and now
+              in cloud and product security in Germany. I have done hands-on penetration testing,
+              mobile and API assessments, manual code review, and built SAST, DAST and SCA
+              pipelines.
+            </p>
+            <p>
+              What I enjoy most is working next to engineers. I would rather build secure defaults
+              and paved roads than file another ticket, and I like turning security knowledge into
+              tools other people can run, such as <a href="#projects">mcp-guard</a>.
+            </p>
+            <p>
+              Outside my day job I have taught software testing to members of the Ethiopian
+              community in the US to help them move into tech careers. Around 50 of the 87 people
+              I certified found technical jobs.
             </p>
           </div>
-          <div class="glass-panel">
-            <ul class="detail-list">
-              <li>Focused cybersecurity portfolio</li>
-              <li>Direct links to public work and writing</li>
-              <li>Downloadable CV for applications</li>
-            </ul>
-          </div>
+          <ul class="facts">
+            <li><span class="k">role</span><span>Security Engineer</span></li>
+            <li><span class="k">based</span><span>Frankfurt area, Germany</span></li>
+            <li><span class="k">education</span><span>MSc Computer Security, University of Manchester (NCSC-certified)</span></li>
+            <li><span class="k">code</span><span>Python, Kotlin, Java, TypeScript, C#, C++</span></li>
+            <li><span class="k">languages</span><span>English, Amharic</span></li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="content-section" id="projects">
-        <div class="section-header">
-          <p class="section-label">Projects</p>
-          <h2>Selected work</h2>
-        </div>
-        <div class="card-stack">
-          <article class="project-card">
-            <p class="card-index">01</p>
+    <section class="section" id="experience">
+      <div class="wrap">
+        <h2 class="section-title"><span class="path">~/</span>experience</h2>
+        <p class="section-intro">From government red-team work to fintech AppSec to cloud security.</p>
+
+        <ol class="timeline" reversed>
+          <li class="role is-current">
+            <div class="role-when">2026 – now</div>
+            <div class="role-body">
+              <h3>Security Engineer</h3>
+              <p class="role-org">Sensory-Minds · Germany</p>
+              <ul>
+                <li>Responsible for the security of the Azure server estate for the company's main pharmaceutical client.</li>
+                <li>Writing the company's AI security guideline, which sets the rules for how teams use AI tools safely.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="role">
+            <div class="role-when">2024 – 2026</div>
+            <div class="role-body">
+              <h3>Application Security Specialist</h3>
+              <p class="role-org">Bet365 · Manchester, UK</p>
+              <ul>
+                <li>Manual penetration tests and security assessments across web, mobile and REST APIs.</li>
+                <li>Security code review in C#, JavaScript, C++, Kotlin and Python, walking through findings with developers.</li>
+                <li>Introduced STRIDE threat modelling for new features, cutting high-risk design issues by over 40% before implementation.</li>
+                <li>Integrated SAST, DAST and SCA into GitHub Actions, tuned for signal so security gates run before production.</li>
+                <li>Ran vulnerability-disclosure intake, triage and remediation tracking, and supply-chain risk analysis.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="role">
+            <div class="role-when">2021 – 2022</div>
+            <div class="role-body">
+              <h3>Information Security Specialist</h3>
+              <p class="role-org">ICAP at Columbia University · Addis Ababa</p>
+              <ul>
+                <li>First and only security specialist, supporting the Ethiopian Public Health Institute and government health institutions.</li>
+                <li>Tested SaaS platforms with Burp Suite and OWASP ZAP; added SAST and dependency scanning to Azure DevOps pipelines.</li>
+                <li>Hardened AWS environments (IAM, secrets management, secure configuration) and cut average remediation time by about 25%.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="role">
+            <div class="role-when">2020 – 2022</div>
+            <div class="role-body">
+              <h3>Penetration Tester</h3>
+              <p class="role-org">Freelance · Remote</p>
+              <ul>
+                <li>Threat modelling for microservices, APIs and auth flows; reviews of cryptography and key management.</li>
+                <li>Security guidance for legacy migrations to AWS and Azure, and support for incident investigations.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="role">
+            <div class="role-when">2015 – 2021</div>
+            <div class="role-body">
+              <h3>Systems and Application Security Engineer</h3>
+              <p class="role-org">Information Network Security Agency (INSA) · Addis Ababa</p>
+              <ul>
+                <li>Black-box and white-box assessments of high-value government systems used at national scale.</li>
+                <li>Found business-logic and privilege-escalation flaws with real operational impact; reported to executive audiences.</li>
+                <li>Helped teams adopt OWASP-based secure development standards and ran secure-coding training.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <h2 class="section-title"><span class="path">~/</span>projects</h2>
+        <p class="section-intro">Open-source tools I build to make security checks repeatable.</p>
+
+        <article class="featured">
+          <div>
+            <h3>mcp-guard</h3>
+            <p class="tagline">Security scanner for MCP (Model Context Protocol) and AI agent configurations.</p>
+            <p>
+              AI assistants such as Claude, Cursor and VS Code now launch third-party MCP servers with
+              the user's privileges. mcp-guard reads their config files and flags the risky ones
+              before an agent ever starts them.
+            </p>
+            <ul>
+              <li>Hardcoded secrets, unpinned and typosquatted packages</li>
+              <li>Over-broad filesystem access, container escapes, auto-approved tools</li>
+              <li>Tool poisoning, hidden Unicode instructions and rug pulls</li>
+              <li>SARIF output and a GitHub Action for code scanning</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li><li>AI security</li><li>supply chain</li><li>SARIF</li>
+            </ul>
+            <p style="margin-top:1.25rem"><a class="project-link" href="https://github.com/A-m-anuel/mcp-guard" target="_blank" rel="noopener">github.com/A-m-anuel/mcp-guard</a></p>
+          </div>
+<pre class="scan" aria-label="Example mcp-guard output"><span class="w">$ mcp-guard scan claude_desktop_config.json</span>
+
+<span class="c">CRITICAL</span> <span class="w">MCP007</span> Over-broad filesystem access
+         [filesystem] Server is given the filesystem root '/'.
+
+<span class="h">HIGH</span>     <span class="w">MCP012</span> Possible typosquatted package
+         [notes] 'server-fileystem' is 1 edit away
+         from '@modelcontextprotocol/server-filesystem'
+
+<span class="h">HIGH</span>     <span class="w">MCP001</span> Hardcoded secret
+         [github] Literal credential in env
+         evidence: q8Zr…**** (32 chars)
+
+<span class="m">MEDIUM</span>   <span class="w">MCP003</span> Unpinned package
+         npx launches '@acme/srv' with no version
+
+<span class="w">22 finding(s): 2 critical, 11 high, 8 medium</span></pre>
+        </article>
+
+        <ul class="project-list">
+          <li class="project">
             <div>
               <h3>AI Security Scanner</h3>
-              <p>
-                A security-focused repository that reflects my interest in practical tooling,
-                applied analysis, and hands-on experimentation.
-              </p>
+              <p>Combines pattern-based analysis with a Hugging Face model to find vulnerabilities in source code, covering the OWASP Top 10. Works offline, and goes beyond regex rules by adding AI-assisted reasoning.</p>
+              <ul class="tags"><li>Python</li><li>Hugging Face</li><li>SAST</li><li>OWASP Top 10</li></ul>
             </div>
-            <a href="https://github.com/A-m-anuel/ai-security-scanner" target="_blank" rel="noreferrer">Open</a>
-          </article>
-          <article class="project-card">
-            <p class="card-index">02</p>
+            <a class="project-link" href="https://github.com/A-m-anuel/ai-security-scanner" target="_blank" rel="noopener">source</a>
+          </li>
+          <li class="project">
             <div>
-              <h3>ESBMC AI</h3>
-              <p>
-                A project exploring technical depth around intelligent systems, experimentation,
-                and engineering-focused problem solving.
-              </p>
+              <h3>ESBMC-AI</h3>
+              <p>AI-assisted vulnerability detection for C and C++, built at the University of Manchester. It adds LLM-based reasoning to the ESBMC open-source model checker, to surface issues that traditional static analysis misses.</p>
+              <ul class="tags"><li>C / C++</li><li>LLM</li><li>formal verification</li><li>ESBMC</li></ul>
             </div>
-            <a href="https://github.com/A-m-anuel/esbmc-ai" target="_blank" rel="noreferrer">Open</a>
-          </article>
-          <article class="project-card">
-            <p class="card-index">03</p>
+            <a class="project-link" href="https://github.com/A-m-anuel/esbmc-ai" target="_blank" rel="noopener">source</a>
+          </li>
+          <li class="project">
             <div>
-              <h3>Resume PDF</h3>
-              <p>
-                A direct download for recruiters and hiring teams who want the traditional CV format.
-              </p>
+              <h3>CuSTaRD: Cyber Support Tool for Risk Decisions</h3>
+              <p>My MSc dissertation: a Django application that automates cybersecurity risk management and helps organisations make risk decisions in a structured, repeatable way.</p>
+              <ul class="tags"><li>Django</li><li>risk management</li><li>MSc research</li></ul>
             </div>
-            <a href="assets/Amanuel_Seid_CV.pdf" target="_blank" rel="noreferrer">View</a>
-          </article>
-        </div>
-      </section>
+            <a class="project-link" href="https://github.com/A-m-anuel" target="_blank" rel="noopener">profile</a>
+          </li>
+          <li class="project">
+            <div>
+              <h3>HealthData Insight</h3>
+              <p>FHIR data-quality checks and public-health analytics, drawing on my work with health institutions in Ethiopia.</p>
+              <ul class="tags"><li>FHIR</li><li>health informatics</li><li>data quality</li></ul>
+            </div>
+            <a class="project-link" href="https://github.com/A-m-anuel" target="_blank" rel="noopener">profile</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="content-section" id="writing">
-        <div class="section-header">
-          <p class="section-label">Writing</p>
-          <h2>Notes and walkthroughs</h2>
-        </div>
-        <div class="card-grid">
-          <article class="glass-panel article-card">
-            <h3>Blog archive</h3>
-            <p>Short articles and profile-building content that supports the CV.</p>
-            <a href="blog.html">Visit blog</a>
-          </article>
-          <article class="glass-panel article-card">
-            <h3>Medium</h3>
-            <p>Security posts covering walkthroughs, labs, and technical learning.</p>
-            <a href="https://medium.com/@cristianaman7" target="_blank" rel="noreferrer">Open Medium</a>
-          </article>
-        </div>
-      </section>
+    <section class="section" id="certifications">
+      <div class="wrap">
+        <h2 class="section-title"><span class="path">~/</span>certifications</h2>
+        <p class="section-intro">Offensive, DevSecOps and network credentials, plus continuous training.</p>
 
-      <footer class="site-footer" id="contact">
-        <p>&copy; 2026</p>
-        <a href="https://github.com/A-m-anuel" target="_blank" rel="noreferrer">github.com/A-m-anuel</a>
-        <a href="https://www.linkedin.com/in/amanuel-abate/" target="_blank" rel="noreferrer">linkedin.com/in/amanuel-abate</a>
-      </footer>
-    </main>
-  </div>
+        <div class="cert-grid">
+          <div class="cert">
+            <span class="cert-name">Certified DevSecOps Professional (CDP)</span>
+            <span class="cert-issuer">Practical DevSecOps</span>
+            <span class="cert-status">verified on Credly</span>
+          </div>
+          <div class="cert">
+            <span class="cert-name">Certified Ethical Hacker (CEH)</span>
+            <span class="cert-issuer">EC-Council</span>
+            <span class="cert-status">certified</span>
+          </div>
+          <div class="cert">
+            <span class="cert-name">Practical Junior Penetration Tester (PJPT)</span>
+            <span class="cert-issuer">TCM Security · 2024</span>
+            <span class="cert-status">certified</span>
+          </div>
+          <div class="cert">
+            <span class="cert-name">NIST Cybersecurity Professional (NCSP)</span>
+            <span class="cert-issuer">NIST Cybersecurity Framework</span>
+            <span class="cert-status">certified</span>
+          </div>
+          <div class="cert">
+            <span class="cert-name">CCNA Routing and Switching</span>
+            <span class="cert-issuer">Cisco · 2020</span>
+            <span class="cert-status">earned</span>
+          </div>
+          <div class="cert">
+            <span class="cert-name">DevOps for Pentesters</span>
+            <span class="cert-issuer">Practical DevSecOps</span>
+            <span class="cert-status">completed</span>
+          </div>
+          <div class="cert">
+            <span class="cert-name">AWS Certified Security – Specialty</span>
+            <span class="cert-issuer">Amazon Web Services</span>
+            <span class="cert-status pending">in progress</span>
+          </div>
+        </div>
+
+        <h3 class="subhead">Training</h3>
+        <ul class="plain-list">
+          <li><span class="yr">2026</span><span>DevSecOps learning path <span class="note">· TryHackMe</span></span></li>
+          <li><span class="yr">2024</span><span>Practical Ethical Hacking <span class="note">· TCM Security</span></span></li>
+          <li><span class="yr">2017</span><span>Mobile Application Penetration Testing <span class="note">· Koenig Solutions</span></span></li>
+        </ul>
+
+        <h3 class="subhead">Education</h3>
+        <div class="edu">
+          <div>
+            <span class="yr">2022 – 2023</span>
+            <h3>MSc Advanced Computer Science: Computer Security</h3>
+            <p>University of Manchester. NCSC-certified programme. Equity and Merit Scholarship, selected from more than 4,000 East African applicants.</p>
+          </div>
+          <div>
+            <span class="yr">2012 – 2015</span>
+            <h3>BSc Information Systems</h3>
+            <p>Bahir Dar University, Ethiopia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="writing">
+      <div class="wrap">
+        <h2 class="section-title"><span class="path">~/</span>writing</h2>
+        <p class="section-intro">Notes on security engineering, tooling and labs.</p>
+        <ul class="posts">
+          <li class="post-row">
+            <time datetime="2026-10">Oct 2026</time>
+            <div>
+              <a class="title" href="posts/mcp-config-attack-surface.html">Your MCP config is the new .env file</a>
+              <p>Why AI agent configs became an unscanned attack surface, and what I check for in mcp-guard.</p>
+            </div>
+          </li>
+          <li class="post-row">
+            <span class="kind">Medium</span>
+            <div>
+              <a class="title" href="https://medium.com/@cristianaman7" target="_blank" rel="noopener">Security write-ups on Medium</a>
+              <p>Walkthroughs, labs and hands-on attack notes.</p>
+            </div>
+          </li>
+        </ul>
+        <p style="margin-top:1.5rem"><a href="blog.html">All writing</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <h2 class="section-title"><span class="path">~/</span>contact</h2>
+        <p class="section-intro">Open to conversations about application security, DevSecOps and AI security work.</p>
+        <div class="contact-block">
+          <div><span class="k">email</span><a href="mailto:cristianaman7@gmail.com">cristianaman7@gmail.com</a></div>
+          <div><span class="k">linkedin</span><a href="https://www.linkedin.com/in/amanuel-abate/" target="_blank" rel="noopener">in/amanuel-abate</a></div>
+          <div><span class="k">github</span><a href="https://github.com/A-m-anuel" target="_blank" rel="noopener">A-m-anuel</a></div>
+          <div><span class="k">medium</span><a href="https://medium.com/@cristianaman7" target="_blank" rel="noopener">@cristianaman7</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Amanuel Abate Seid</span>
+      <span>static html · no trackers · <a href="https://github.com/A-m-anuel/A-m-anuel.github.io" target="_blank" rel="noopener">source</a></span>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
