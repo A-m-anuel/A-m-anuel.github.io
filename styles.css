@@ -301,3 +301,4 @@ h3 { font-family: var(--sans); font-weight: 600; font-size: 1.2rem; line-height:
   body { background: #fff; color: #000; }
   .nav, .hero-actions, .terminal, .footer { display: none; }
 }
+.project-soon { color: var(--muted); font-size: .8rem; }

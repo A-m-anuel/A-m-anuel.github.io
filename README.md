@@ -14,7 +14,6 @@ Plain HTML, CSS and a little JavaScript. No build step, no frameworks, no tracke
 | `styles.css` | All styles (colour tokens at the top) |
 | `script.js` | Mobile menu and the one-time terminal typing in the hero |
 | `404.html` | Not-found page |
-| `assets/Amanuel_Seid_CV.pdf` | Downloadable CV |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is |
 
 ## Publish
@@ -33,3 +32,7 @@ python3 -m http.server 8000
 
 1. Copy `posts/mcp-config-attack-surface.html` to `posts/<new-slug>.html` and edit the title, meta and body.
 2. Add a `<li class="post-row">` entry to `blog.html` (and to the writing section in `index.html` if it should be featured).
+
+## Privacy
+
+No CV PDF, phone number or visa details are published here. The CV is shared on request by email.
