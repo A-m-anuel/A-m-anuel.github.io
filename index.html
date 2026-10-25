@@ -64,9 +64,8 @@
             <p class="out">security engineer · application security, devsecops, cloud</p>
             <div class="gap"></div>
             <p><span class="ps">$</span> <span class="cmd">cat focus.txt</span></p>
-            <p class="out">I help engineering teams ship secure software: code review, pentesting,</p>
-            <p class="out">threat modelling, and security gates built into CI/CD. These days I am</p>
-            <p class="out">also working on <span class="hl">AI agent security</span> and MCP supply-chain risk.</p>
+            <p class="out">secure CI/CD pipelines, pentesting, code review,</p>
+            <p class="out">and <span class="hl">AI agent security</span></p>
             <div class="gap"></div>
             <p><span class="ps">$</span> <span class="cmd">uptime</span></p>
             <p class="out">10+ years in security · Ethiopia → UK → Germany</p>
@@ -88,28 +87,23 @@
         <div class="about-grid">
           <div>
             <p>
-              I have worked in security since 2015: first on national-scale government systems at
-              Ethiopia's Information Network Security Agency, then in health and fintech, and now
-              in cloud and product security in Germany. I have done hands-on penetration testing,
-              mobile and API assessments, manual code review, and built SAST, DAST and SCA
-              pipelines.
+              I started my cybersecurity journey at Ethiopia's Information Network Security Agency
+              (INSA), the national security agency, testing government systems used across the country.
             </p>
             <p>
-              What I enjoy most is working next to engineers. I would rather build secure defaults
-              and paved roads than file another ticket, and I like turning security knowledge into
-              tools other people can run, such as <a href="#projects">mcp-guard</a>.
+              I then became the first security specialist at ICAP at Columbia University, completed
+              an MSc in Computer Security at the University of Manchester on a merit scholarship, and
+              worked in application security at Bet365.
             </p>
             <p>
-              Outside my day job I have taught software testing to members of the Ethiopian
-              community in the US to help them move into tech careers. Around 50 of the 87 people
-              I certified found technical jobs.
+              Today I am a security engineer in Germany, building security into pipelines and cloud
+              environments, and writing open-source tools such as <a href="#projects">mcp-guard</a>.
             </p>
           </div>
           <ul class="facts">
             <li><span class="k">role</span><span>Security Engineer, Sensory-Minds</span></li>
             <li><span class="k">based</span><span>Frankfurt area, Germany</span></li>
-            <li><span class="k">education</span><span>MSc Computer Security, University of Manchester (NCSC-certified)</span></li>
-            <li><span class="k">code</span><span>Python, JavaScript, PHP, Kotlin, Java, C#, C++</span></li>
+            <li><span class="k">education</span><span>MSc Computer Security, University of Manchester</span></li>
             <li><span class="k">languages</span><span>English, Amharic</span></li>
           </ul>
         </div>
@@ -119,8 +113,6 @@
     <section class="section" id="experience">
       <div class="wrap">
         <h2 class="section-title"><span class="path">~/</span>experience</h2>
-        <p class="section-intro">From government red-team work to fintech AppSec to cloud security.</p>
-
         <ol class="timeline" reversed>
           <li class="role is-current">
             <div class="role-when">2026 – now</div>
@@ -128,11 +120,9 @@
               <h3>Security Engineer</h3>
               <p class="role-org">Sensory-Minds · Germany</p>
               <ul>
-                <li>Integrate security into GitLab CI/CD pipelines: SAST, SCA, DAST and container scanning with Semgrep, Snyk and Trivy.</li>
-                <li>Set up automatic new-CVE notifications for every project, routed to the team that owns it.</li>
-                <li>Analyse and prioritise server vulnerabilities across the Azure estate of the company's main pharmaceutical client.</li>
-                <li>Penetration testing of client applications, and security work across Azure DevOps projects.</li>
-                <li>Writing the company's AI security guideline for safe use of AI tools.</li>
+                <li>SAST, SCA, DAST and container scanning in GitLab CI/CD with Semgrep, Snyk and Trivy.</li>
+                <li>New-CVE alerts for every project, routed to the owning team.</li>
+                <li>Server vulnerability analysis on Azure, Azure DevOps security and pentesting.</li>
               </ul>
             </div>
           </li>
@@ -142,11 +132,9 @@
               <h3>Application Security Specialist</h3>
               <p class="role-org">Bet365 · Manchester, UK</p>
               <ul>
-                <li>Manual security assessments, white-box code review and penetration testing across web apps, REST APIs and cloud services: 180+ vulnerabilities found and remediated.</li>
-                <li>Ran threat-modelling and risk workshops at design time, reducing high-risk architectural issues by 35% before implementation.</li>
-                <li>Tuned SAST, DAST and dependency-scanning rules to cut false positives by 40%, so developers focus on real risk.</li>
-                <li>Built Python automation for vulnerability validation and reporting, reducing manual analysis time by 45%.</li>
-                <li>Led triage of pentest and coordinated-disclosure reports, cutting average remediation time by 30%; supply-chain risk analysis and security awareness training.</li>
+                <li>Pentesting and code review across web, API and cloud services: 180+ vulnerabilities fixed.</li>
+                <li>Threat modelling at design time: 35% fewer high-risk design issues.</li>
+                <li>Tuned SAST, DAST and SCA rules: 40% fewer false positives.</li>
               </ul>
             </div>
           </li>
@@ -156,9 +144,9 @@
               <h3>Information Security Specialist</h3>
               <p class="role-org">ICAP at Columbia University · Addis Ababa</p>
               <ul>
-                <li>First and only security specialist, supporting the Ethiopian Public Health Institute and government health institutions.</li>
-                <li>Tested SaaS platforms with Burp Suite and OWASP ZAP; added SAST and dependency scanning to Azure DevOps pipelines.</li>
-                <li>Hardened AWS environments (IAM, secrets management, secure configuration) and cut average remediation time by about 25%.</li>
+                <li>First security specialist, supporting the Ethiopian Public Health Institute.</li>
+                <li>Application testing, plus SAST and dependency scanning in Azure DevOps.</li>
+                <li>AWS hardening: IAM, secrets and secure configuration.</li>
               </ul>
             </div>
           </li>
@@ -168,9 +156,8 @@
               <h3>Penetration Tester</h3>
               <p class="role-org">Craft Software Professionals (freelance) · Remote, US</p>
               <ul>
-                <li>White-box and black-box testing of web, API, mobile and cloud targets, plus threat modelling for microservices and auth flows.</li>
-                <li>Built Python and Bash security automation that made analysis and reporting about 40% faster.</li>
-                <li>Reviewed cryptography, key management, cookie, CSP and CORS controls; advised on secure migrations to AWS and Azure.</li>
+                <li>Web, API, mobile and cloud penetration testing.</li>
+                <li>Python and Bash automation for testing and reporting.</li>
               </ul>
             </div>
           </li>
@@ -180,9 +167,8 @@
               <h3>Systems and Application Security Engineer</h3>
               <p class="role-org">Information Network Security Agency (INSA) · Addis Ababa</p>
               <ul>
-                <li>Black-box and white-box assessments of high-value government systems used at national scale.</li>
-                <li>Found business-logic and privilege-escalation flaws with real operational impact; supported red-team engagements and wrote reports for engineering and executive audiences.</li>
-                <li>Helped teams adopt OWASP-based secure development standards and ran secure-coding training.</li>
+                <li>Security assessments of national government systems.</li>
+                <li>Secure coding standards and training for development teams.</li>
               </ul>
             </div>
           </li>
@@ -193,22 +179,17 @@
     <section class="section" id="projects">
       <div class="wrap">
         <h2 class="section-title"><span class="path">~/</span>projects</h2>
-        <p class="section-intro">Open-source tools I build to make security checks repeatable.</p>
+        <p class="section-intro">Open-source security tools.</p>
 
         <article class="featured">
           <div>
             <h3>mcp-guard</h3>
             <p class="tagline">Security scanner for MCP (Model Context Protocol) and AI agent configurations.</p>
-            <p>
-              AI assistants such as Claude, Cursor and VS Code now launch third-party MCP servers with
-              the user's privileges. mcp-guard reads their config files and flags the risky ones
-              before an agent ever starts them.
-            </p>
             <ul>
-              <li>Hardcoded secrets, unpinned and typosquatted packages</li>
-              <li>Over-broad filesystem access, container escapes, auto-approved tools</li>
-              <li>Tool poisoning, hidden Unicode instructions and rug pulls</li>
-              <li>SARIF output and a GitHub Action for code scanning</li>
+              <li>Secrets, unpinned and typosquatted packages</li>
+              <li>Excessive permissions and auto-approved tools</li>
+              <li>Tool poisoning and rug pulls</li>
+              <li>SARIF output and a GitHub Action</li>
             </ul>
             <ul class="tags">
               <li>Python</li><li>AI security</li><li>supply chain</li><li>SARIF</li>
@@ -238,7 +219,7 @@
           <li class="project">
             <div>
               <h3>AI Security Scanner</h3>
-              <p>Combines pattern-based analysis with a Hugging Face model to find vulnerabilities in source code, covering the OWASP Top 10. Works offline, and goes beyond regex rules by adding AI-assisted reasoning.</p>
+              <p>Finds OWASP Top 10 vulnerabilities in source code using patterns plus a Hugging Face model.</p>
               <ul class="tags"><li>Python</li><li>Hugging Face</li><li>SAST</li><li>OWASP Top 10</li></ul>
             </div>
             <a class="project-link" href="https://github.com/A-m-anuel/ai-security-scanner" target="_blank" rel="noopener">source</a>
@@ -246,7 +227,7 @@
           <li class="project">
             <div>
               <h3>ESBMC-AI</h3>
-              <p>AI-assisted vulnerability detection for C and C++, built at the University of Manchester. It adds LLM-based reasoning to the ESBMC open-source model checker, to surface issues that traditional static analysis misses.</p>
+              <p>LLM-assisted vulnerability detection for C and C++, built on the ESBMC model checker.</p>
               <ul class="tags"><li>C / C++</li><li>LLM</li><li>formal verification</li><li>ESBMC</li></ul>
             </div>
             <a class="project-link" href="https://github.com/A-m-anuel/esbmc-ai" target="_blank" rel="noopener">source</a>
@@ -254,7 +235,7 @@
           <li class="project">
             <div>
               <h3>CuSTaRD: Cyber Support Tool for Risk Decisions</h3>
-              <p>My MSc dissertation: a Django application that automates cybersecurity risk management and helps organisations make risk decisions in a structured, repeatable way.</p>
+              <p>My MSc dissertation: a Django tool that supports cybersecurity risk decisions.</p>
               <ul class="tags"><li>Django</li><li>risk management</li><li>MSc research</li></ul>
             </div>
             <span class="project-link project-soon">code coming soon</span>
@@ -262,7 +243,7 @@
           <li class="project">
             <div>
               <h3>HealthData Insight</h3>
-              <p>FHIR data-quality checks and public-health analytics, drawing on my work with health institutions in Ethiopia.</p>
+              <p>FHIR data-quality checks and public-health analytics.</p>
               <ul class="tags"><li>FHIR</li><li>health informatics</li><li>data quality</li></ul>
             </div>
             <a class="project-link" href="https://github.com/A-m-anuel/healthdata-insight" target="_blank" rel="noopener">source</a>
@@ -274,7 +255,6 @@
     <section class="section" id="certifications">
       <div class="wrap">
         <h2 class="section-title"><span class="path">~/</span>certifications</h2>
-        <p class="section-intro">Offensive, DevSecOps and network credentials, plus continuous training.</p>
 
         <div class="cert-grid">
           <div class="cert">
@@ -326,7 +306,7 @@
           <div>
             <span class="yr">2022 – 2023</span>
             <h3>MSc Advanced Computer Science: Computer Security</h3>
-            <p>University of Manchester. NCSC-certified programme. Equity and Merit Scholarship, selected from more than 4,000 East African applicants.</p>
+            <p>University of Manchester. NCSC-certified. Equity and Merit Scholarship.</p>
           </div>
           <div>
             <span class="yr">2012 – 2015</span>
@@ -340,27 +320,26 @@
     <section class="section" id="writing">
       <div class="wrap">
         <h2 class="section-title"><span class="path">~/</span>writing</h2>
-        <p class="section-intro">Notes on security engineering, tooling and labs.</p>
         <ul class="posts">
           <li class="post-row">
             <time datetime="2026-10">Oct 2026</time>
             <div>
               <a class="title" href="posts/mcp-config-attack-surface.html">Your MCP config is the new .env file</a>
-              <p>Why AI agent configs became an unscanned attack surface, and what I check for in mcp-guard.</p>
+              <p>The security risks hiding in AI agent configs.</p>
             </div>
           </li>
           <li class="post-row">
             <span class="kind">Medium</span>
             <div>
               <a class="title" href="https://medium.com/@cristianaman7/aws-enumeration-using-pacu-cybrs-iam-lab-a24450697150" target="_blank" rel="noopener">AWS enumeration using Pacu: Cybr's IAM lab</a>
-              <p>IAM enumeration as the first step in AWS pentesting.</p>
+              <p>IAM enumeration in AWS pentesting.</p>
             </div>
           </li>
           <li class="post-row">
             <span class="kind">Medium</span>
             <div>
               <a class="title" href="https://medium.com/@cristianaman7/unraveling-the-scattered-spider-cyber-attacks-on-uk-retailers-1e161aa25fbf" target="_blank" rel="noopener">Unraveling the Scattered Spider attacks on UK retailers</a>
-              <p>How the 2025 attacks on UK retailers unfolded.</p>
+              <p>How the attacks unfolded.</p>
             </div>
           </li>
         </ul>
@@ -371,7 +350,6 @@
     <section class="section" id="contact">
       <div class="wrap">
         <h2 class="section-title"><span class="path">~/</span>contact</h2>
-        <p class="section-intro">Open to conversations about application security, DevSecOps and AI security work.</p>
         <div class="contact-block">
           <div><span class="k">email</span><a href="mailto:cristianaman7@gmail.com">cristianaman7@gmail.com</a></div>
           <div><span class="k">linkedin</span><a href="https://www.linkedin.com/in/amanuel-abate/" target="_blank" rel="noopener">in/amanuel-abate</a></div>
